@@ -14,7 +14,7 @@ public class VersionCompareResult extends RestValidation {
     private Result result;
 
     @JsonInclude(Include.NON_NULL)
-    private boolean valid;
+    private boolean valid = true;
 
     public Result getResult() {
         return result;

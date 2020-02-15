@@ -33,7 +33,7 @@ public class VersionValidatorImpl implements VersionValidator {
             if (!versionCompare.getVersion1().matches("^\\d+(\\.\\d+)*$")
                     || !versionCompare.getVersion2().matches("^\\d+(\\.\\d+)*$")) {
                 result.getMessages().add(
-                        "Version can contain only numbers and dots. Cannot start or end with a dot. Eg: 1.0, 1.1.0, 1.1.1, 1");
+                        "Version can contain only positive numbers and dots. Cannot start or end with a dot. Eg: 1.0, 1.1.0, 1.1.1, 1");
             }
         }
 

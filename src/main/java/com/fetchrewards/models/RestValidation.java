@@ -9,7 +9,7 @@ public class RestValidation {
     @JsonInclude(Include.NON_NULL)
     private boolean valid;
     
-    @JsonInclude(Include.NON_NULL)
+    @JsonInclude(Include.NON_EMPTY)
     private List<String> messages;
 
     public List<String> getMessages() {
