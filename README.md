@@ -1,4 +1,4 @@
-## FetchRewards Version Compare
+## FetchRewards Version Checker
 
 ### Prerequisites
 + Maven (v3.5.2)
