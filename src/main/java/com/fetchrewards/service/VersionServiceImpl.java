@@ -32,8 +32,10 @@ public class VersionServiceImpl implements VersionService {
                 if (compare != 0) {
                     if (v1 < v2) {
                         result.setResult(Result.before);
+                        result.getMessages().add(versionCompare.getVersion1() + " is before " + versionCompare.getVersion2());
                     } else {
                         result.setResult(Result.after);
+                        result.getMessages().add(versionCompare.getVersion1() + " is after " + versionCompare.getVersion2());
                     }
                     break;
                 }
@@ -41,6 +43,7 @@ public class VersionServiceImpl implements VersionService {
 
             if (result.getResult() == null) {
                 result.setResult(Result.equal);
+                result.getMessages().add(versionCompare.getVersion1() + " is equal to " + versionCompare.getVersion2());
             }
         } catch (NumberFormatException e) {
            logger.error("Error occurred while parsing the number. Single octet of the version number cannot be greater than " + Integer.MAX_VALUE);
